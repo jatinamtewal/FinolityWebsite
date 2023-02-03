@@ -1,0 +1,56 @@
+{
+    "educators":[
+        {
+            "id":1,
+            "name":"Brijest Jindal",
+            "desc":"The topmost educator of Physical Chemistry, BJ Sir has mentored thousands of IIT-JEE aspirants including AIR 1 & many top rankers",
+            "watchtime":"173M",
+            "followers":"71K",
+            "image":"https://static.uacdn.net/educator_new/processed_image/84CC1FD3-9E00-45FD-A802-96759DCA6D7D_.png",
+            "title":"legend"
+
+        },{"id":2,
+            "name":"Piyush Maheshwari",
+            "desc":"A mentor to AIR 1, four 100 percentilers in JEE Mains and a guiding light to 10k+ IITians- all of these add to his exceptional achievements.",
+            "watchtime":"146M",
+            "followers":"75K",
+            "image":"https://static.uacdn.net/educator_new/processed_image/91734A3A-1992-4715-8815-D2345A0CAF1C_.png",
+            "title":"legend"
+
+        },{"id":3,
+            "name":"Vineet Loomba",
+            "desc":"A game-changer in Mathematics and a mentor to 100 percentilers in 2021 & 2022, his courses are regarded as the Bible for IIT JEE.",
+            "watchtime":"166M",
+            "followers":"135K",
+            "image":"https://static.uacdn.net/educator_new/processed_image/4386E14E-11AF-4826-A8F7-EA1A5CFD9A94_.png",
+            "title":"legend"
+
+        },{"id":4,
+            "name":"Mohammad Kashif Alam",
+            "desc":"A Star faculty of IIT JEE with 11 Best Teaching Awards, Mohammad sir has been an exceptional coach to 6000 AIRs in the last 10+ years.",
+            "watchtime":"154M",
+            "followers":"70K",
+            "image":"https://static.uacdn.net/educator_new/processed_image/88C38E35-DD53-41BC-9B0C-1325C2C13CD5_.png",
+            "title":"legend"
+
+        },
+        {"id":5,
+            "name":"Mohammad Kashif Alam",
+            "desc":"A Star faculty of IIT JEE with 11 Best Teaching Awards, Mohammad sir has been an exceptional coach to 6000 AIRs in the last 10+ years.",
+            "watchtime":"154M",
+            "followers":"70K",
+            "image":"https://static.uacdn.net/educator_new/processed_image/88C38E35-DD53-41BC-9B0C-1325C2C13CD5_.png",
+            "title":"legend"
+
+        },{"id":6,
+        "name":"Mohammad Kashif Alam",
+        "desc":"A Star faculty of IIT JEE with 11 Best Teaching Awards, Mohammad sir has been an exceptional coach to 6000 AIRs in the last 10+ years.",
+        "watchtime":"154M",
+        "followers":"70K",
+        "image":"https://static.uacdn.net/educator_new/processed_image/88C38E35-DD53-41BC-9B0C-1325C2C13CD5_.png",
+        "title":"legend"
+
+    }
+    ]
+}
+
