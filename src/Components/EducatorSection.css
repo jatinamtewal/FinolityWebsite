@@ -21,6 +21,7 @@
     color: var(--clr-primary-400);
     margin-top: 6.4rem;
     font-size:22px;
+    width: 16rem;
 }
 .headFeatures{
     display: flex;
@@ -94,6 +95,10 @@
     border-top-right-radius: 10px;
     z-index: 1;
 }
+/* *{
+    border: 1px solid red;
+    background-color: rgb(255, 164, 164);
+} */
 
 .spantitle::before{
     content: "";
@@ -175,4 +180,52 @@
 
 .button:hover{
     background-color: #343e46;
+}
+
+
+/* Media Screen Query */
+
+@media screen and (max-width: 600px){
+
+    .heading > h1{
+        font-size: 19px;
+        margin-top: 4rem;
+        width: 22rem;
+    }
+
+    .EducatorPage{
+        padding: 2vmax;
+    }
+
+    .headFeatures{
+        flex-direction: column;
+        /* margin-bottom: 10px; */
+    }
+
+    .headFeatures > div{
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .EducatorsSection{
+        flex-wrap: nowrap;
+        overflow: auto;
+        padding: 2vmax;
+    }
+
+    .Educators{
+        flex-direction: column;
+        margin: 0;
+        margin-right: 2vmax;
+        padding: 1vmax 3vmax;
+    }
+    .Educators > div{
+        margin-top: 2vmax;
+    }
+
+    .button{
+        padding: 14px 115px;
+        font-size: 15px;
+        margin-top: 10px;
+    }
 }

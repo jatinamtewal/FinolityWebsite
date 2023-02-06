@@ -17,7 +17,7 @@ const EducatorSection = () => {
     <div className='EducatorPage'>
         <div className='heading'>
             <h1>
-                India's top educators <br ></br> to learn from
+                India's top educators to learn from
             </h1>
             <div className='headFeatures'>
                 <div>
