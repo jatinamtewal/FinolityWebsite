@@ -30,7 +30,7 @@ const Educators = ({data}) => {
                             <p>Followers</p>
                         </div>
                     </div>
-                    <button>View Profile <AiOutlineRight/></button>
+                    {/* <button>View Profile <AiOutlineRight/></button> */}
                 </div>
             </div>
   )

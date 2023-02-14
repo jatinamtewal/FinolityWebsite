@@ -1,0 +1,12 @@
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    padding:1.5vmax 1vmax;
+
+    /* background-color: aquamarine; */
+}
+.sidebar a{
+    text-decoration: none;
+    padding:0 20px 10px;
+    color: var(--clr-primary);
+}

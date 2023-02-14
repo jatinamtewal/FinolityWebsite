@@ -1,0 +1,68 @@
+:root{
+    --clr-primary:#6749c6;
+    --clr-secondary:#5AD6A0;
+    --clr-grey:#313131;
+}
+
+.backhomebtns a{
+    color:var(--clr-grey);
+    text-decoration: none;
+    padding:2px 10px;
+    border: 1px solid var(--clr-grey);
+    margin-right: 10px;
+}
+
+
+.backhomebtns + h1{
+    margin-top: 2rem;
+}
+
+
+.hero{
+    display: flex;
+    margin-top: 5rem;
+}
+
+.hero ul{
+    margin-top: 1rem;
+}
+
+.hero ul li{
+    display: flex;
+    gap: 5px;
+    margin-bottom: 1rem;
+}
+
+.hero ul li p{
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.hero button{
+    padding: 10px 40px;
+    border: none;
+    background-color: var(--clr-secondary);
+    margin-top: 2rem;
+}
+
+.subjects{
+    margin-top: 3rem;
+}
+
+.subjects div{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.subjects div a{
+    margin-right: 3rem;
+    margin-top: 1rem;
+    padding: 2vmax;
+    /* background-color: red; */
+    text-decoration: none;
+    color: black;
+    border-left: 2px solid red;
+    border-right:2px solid red;
+    box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
+    border-radius: 10px;
+}
