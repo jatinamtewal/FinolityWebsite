@@ -51,6 +51,190 @@
         "title":"legend"
 
     }
-    ]
+    ],
+    "batches":[{
+        "id":1,
+        "specs":["Hindi","Full Syllabus Completion"],
+        "image":"https://static.uacdn.net/thumbnail/batch/692a4523b7e14698abcf88a033209907.png",
+        "title":"Kota IIT JEE 2024 Excel 5",
+        "date":"20 Feb 2023",
+        "timming":"Morning and Evening Classes",
+        "teachers":["Ajai Sharma","Puneet Aggarwal","Prashant Jain"]
+    },
+    {
+        "id":2,
+        "specs":["Hindi","Full Syllabus Completion"],
+        "image":"https://static.uacdn.net/thumbnail/batch/692a4523b7e14698abcf88a033209907.png",
+        "title":"Kota IIT JEE 2024 Excel 5",
+        "date":"20 Feb 2023",
+        "timming":"Morning and Evening Classes",
+        "teachers":["Ajai Sharma ","Puneet Aggarwal","Prashant Jain"]
+    },
+    {
+        "id":3,
+        "specs":["Hindi","Full Syllabus Completion"],
+        "image":"https://static.uacdn.net/thumbnail/batch/692a4523b7e14698abcf88a033209907.png",
+        "title":"Kota IIT JEE 2024 Excel 5",
+        "date":"20 Feb 2023",
+        "timming":"Morning and Evening Classes",
+        "teachers":["Ajai Sharma","Puneet Aggarwal","Prashant Jain"]
+    },
+    {
+        "id":4,
+        "specs":["Hindi","Full Syllabus Completion"],
+        "image":"https://static.uacdn.net/thumbnail/batch/692a4523b7e14698abcf88a033209907.png",
+        "title":"Kota IIT JEE 2024 Excel 5",
+        "date":"20 Feb 2023",
+        "timming":"Morning and Evening Classes",
+        "teachers":["Ajai Sharma","Puneet Aggarwal","Prashant Jain"]
+    }],
+    "testSeries":[{
+        "id":1,
+        "title":"SAFALTA Batch Series",
+        "testNo":21,
+        "date":"21 Feb 2021",
+        "time":"3:00 PM"
+    },
+    {
+        "id":2,
+        "title":"SAFALTA Batch Series",
+        "testNo":21,
+        "date":"21 Feb 2021",
+        "time":"3:00 PM"
+    },
+    {
+        "id":3,
+        "title":"SAFALTA Batch Series",
+        "testNo":21,
+        "date":"21 Feb 2021",
+        "time":"3:00 PM"
+    },
+    {
+        "id":4,
+        "title":"SAFALTA Batch Series",
+        "testNo":21,
+        "date":"21 Feb 2021",
+        "time":"3:00 PM"
+    }],
+    "upcomingCourses":[{
+        "id":1,
+        "image":"https://static.uacdn.net/thumbnail/course/v2/880DB81F-4D0C-4466-92BA-CDD3FF348011_plus.png",
+        "specs":"Hindi",
+        "subject":"Chemistry",
+        "title":"Physics Crash Course -Impulse IIT JEE Mains/Advance",
+        "date":"20 Feb 2023",
+        "lessons":"28 lessons",
+        "teacher":"Prakash Ranjan"
+    },
+    {
+        "id":2,
+        "image":"https://static.uacdn.net/thumbnail/course/v2/880DB81F-4D0C-4466-92BA-CDD3FF348011_plus.png",
+        "specs":"Hindi",
+        "subject":"Chemistry",
+        "title":"Physics Crash Course -Impulse IIT JEE Mains/Advance",
+        "date":"20 Feb 2023",
+        "lessons":"28 lessons",
+        "teacher":"Prakash Ranjan"
+    },
+    {
+        "id":3,
+        "image":"https://static.uacdn.net/thumbnail/course/v2/880DB81F-4D0C-4466-92BA-CDD3FF348011_plus.png",
+        "specs":"Hindi",
+        "subject":"Chemistry",
+        "title":"Physics Crash Course -Impulse IIT JEE Mains/Advance",
+        "date":"20 Feb 2023",
+        "lessons":"28 lessons",
+        "teacher":"Prakash Ranjan"
+    },
+    {
+        "id":4,
+        "image":"https://static.uacdn.net/thumbnail/course/v2/880DB81F-4D0C-4466-92BA-CDD3FF348011_plus.png",
+        "specs":"Hindi",
+        "subject":"Chemistry",
+        "title":"Physics Crash Course -Impulse IIT JEE Mains/Advance",
+        "date":"20 Feb 2023",
+        "lessons":"28 lessons",
+        "teacher":"Prakash Ranjan"
+    }],
+    "recentlyStartedCourses":[{
+        "id":1,
+        "image":"https://static.uacdn.net/thumbnail/course/v2/880DB81F-4D0C-4466-92BA-CDD3FF348011_plus.png",
+        "specs":"Hindi",
+        "subject":"Chemistry",
+        "title":"Physics Crash Course -Impulse IIT JEE Mains/Advance",
+        "date":"20 Feb 2023",
+        "lessons":"28 lessons",
+        "teacher":"Prakash Ranjan"
+    },
+    {
+        "id":2,
+        "image":"https://static.uacdn.net/thumbnail/course/v2/880DB81F-4D0C-4466-92BA-CDD3FF348011_plus.png",
+        "specs":"Hindi",
+        "subject":"Chemistry",
+        "title":"Physics Crash Course -Impulse IIT JEE Mains/Advance",
+        "date":"20 Feb 2023",
+        "lessons":"28 lessons",
+        "teacher":"Prakash Ranjan"
+    },
+    {
+        "id":3,
+        "image":"https://static.uacdn.net/thumbnail/course/v2/880DB81F-4D0C-4466-92BA-CDD3FF348011_plus.png",
+        "specs":"Hindi",
+        "subject":"Chemistry",
+        "title":"Physics Crash Course -Impulse IIT JEE Mains/Advance",
+        "date":"20 Feb 2023",
+        "lessons":"28 lessons",
+        "teacher":"Prakash Ranjan"
+    },
+    {
+        "id":4,
+        "image":"https://static.uacdn.net/thumbnail/course/v2/880DB81F-4D0C-4466-92BA-CDD3FF348011_plus.png",
+        "specs":"Hindi",
+        "subject":"Chemistry",
+        "title":"Physics Crash Course -Impulse IIT JEE Mains/Advance",
+        "date":"20 Feb 2023",
+        "lessons":"28 lessons",
+        "teacher":"Prakash Ranjan"
+    }],
+    "popularCourses":[{
+        "id":1,
+        "image":"https://static.uacdn.net/thumbnail/course/v2/880DB81F-4D0C-4466-92BA-CDD3FF348011_plus.png",
+        "specs":"Hindi",
+        "subject":"Chemistry",
+        "title":"Physics Crash Course -Impulse IIT JEE Mains/Advance",
+        "date":"20 Feb 2023",
+        "lessons":"28 lessons",
+        "teacher":"Prakash Ranjan"
+    },
+    {
+        "id":2,
+        "image":"https://static.uacdn.net/thumbnail/course/v2/880DB81F-4D0C-4466-92BA-CDD3FF348011_plus.png",
+        "specs":"Hindi",
+        "subject":"Chemistry",
+        "title":"Physics Crash Course -Impulse IIT JEE Mains/Advance",
+        "date":"20 Feb 2023",
+        "lessons":"28 lessons",
+        "teacher":"Prakash Ranjan"
+    },
+    {
+        "id":3,
+        "image":"https://static.uacdn.net/thumbnail/course/v2/880DB81F-4D0C-4466-92BA-CDD3FF348011_plus.png",
+        "specs":"Hindi",
+        "subject":"Chemistry",
+        "title":"Physics Crash Course -Impulse IIT JEE Mains/Advance",
+        "date":"20 Feb 2023",
+        "lessons":"28 lessons",
+        "teacher":"Prakash Ranjan"
+    },
+    {
+        "id":4,
+        "image":"https://static.uacdn.net/thumbnail/course/v2/880DB81F-4D0C-4466-92BA-CDD3FF348011_plus.png",
+        "specs":"Hindi",
+        "subject":"Chemistry",
+        "title":"Physics Crash Course -Impulse IIT JEE Mains/Advance",
+        "date":"20 Feb 2023",
+        "lessons":"28 lessons",
+        "teacher":"Prakash Ranjan"
+    }]
 }
 

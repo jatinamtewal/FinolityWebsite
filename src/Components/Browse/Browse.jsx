@@ -2,15 +2,55 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import Sidebar from '../Sidebar/Sidebar';
 import "./Browse.css";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
+
+import Carousel from "react-multi-carousel";  //npm i react-multi-carousel   <----------------
+import "react-multi-carousel/lib/styles.css"; // add this also      <-------------------------
 import { SlCalender } from "react-icons/sl";
 import { AiFillLock } from "react-icons/ai";
 import { MdWysiwyg } from "react-icons/md";
 
 import data from "../../data.json";
+//inner components
 import Educators from "../Educators.js";
+import Batches from "./innerComponents/Batches.jsx";
+import TestSeries from "./innerComponents/TestSeries.jsx";
+import Courses from "./innerComponents/Courses.jsx";
+
+
+const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 5
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1
+  }
+};
+
+
+
+
+
+
 const Browse = () => {
+      const pStyle={
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',
+        display: '-webkit-box',
+        lineClamp: 2,
+        WebkitLineClamp: 2,
+        WebkitBoxOrient: 'vertical',
+    };
   return (
     <div className='container'>
       <Sidebar/>
@@ -27,108 +67,11 @@ const Browse = () => {
             </div>
 
             <div className="batchCarousel">
-                {/* <Carousel  showStatus={false} showThumbs={false} showIndicators={false}> */}
-              
-                  <div className="batch">
-                    <img src="https://static.uacdn.net/thumbnail/batch/692a4523b7e14698abcf88a033209907.png" alt="" />
-                    <div>
-                      <div className="keywords">
-                        <p>ENGLISH</p>
-                        <p>ENGLISH</p>
-                        <p>ENGLISH</p>
-                        <p>ENGLISH</p>
-                      </div>
-                      <h2>Physics: Crash Course -Impulse JEE IIT Mains/Advance</h2>
-                      <div className="stats">
-                        <ul>
-                          <li>
-                            <SlCalender/>
-                            <p>Started on 9 Feb 2023</p>
-                          </li>
-                          <li>
-                            <SlCalender/>
-                            <p>Started on 9 Feb 2023</p>
-                          </li>
-                          <li>
-                            <SlCalender/>
-                            <p>Started on 9 Feb 2023</p>
-                          </li>
-                        </ul>
-                      </div>
-                        <hr />
-                        <div className='schedule'>
-                          <MdWysiwyg/>
-                          <p>View full schedule</p>
-                        </div>
-                    </div>
-                  </div>
-                  <div className="batch">
-                    <img src="https://static.uacdn.net/thumbnail/batch/692a4523b7e14698abcf88a033209907.png" alt="" />
-                    <div>
-                      <div className="keywords">
-                        <p>ENGLISH</p>
-                        <p>ENGLISH</p>
-                        <p>ENGLISH</p>
-                        <p>ENGLISH</p>
-                      </div>
-                      <h2>Physics: Crash Course -Impulse JEE IIT Mains/Advance</h2>
-                      <div className="stats">
-                        <ul>
-                          <li>
-                            <SlCalender/>
-                            <p>Started on 9 Feb 2023</p>
-                          </li>
-                          <li>
-                            <SlCalender/>
-                            <p>Started on 9 Feb 2023</p>
-                          </li>
-                          <li>
-                            <SlCalender/>
-                            <p>Started on 9 Feb 2023</p>
-                          </li>
-                        </ul>
-                      </div>
-                        <hr />
-                        <div className='schedule'>
-                          <MdWysiwyg/>
-                          <p>View full schedule</p>
-                        </div>
-                    </div>
-                  </div>
-                  <div className="batch">
-                    <img src="https://static.uacdn.net/thumbnail/batch/692a4523b7e14698abcf88a033209907.png" alt="" />
-                    <div>
-                      <div className="keywords">
-                        <p>ENGLISH</p>
-                        <p>ENGLISH</p>
-                        <p>ENGLISH</p>
-                        <p>ENGLISH</p>
-                      </div>
-                      <h2>Physics: Crash Course -Impulse JEE IIT Mains/Advance</h2>
-                      <div className="stats">
-                        <ul>
-                          <li>
-                            <SlCalender/>
-                            <p>Started on 9 Feb 2023</p>
-                          </li>
-                          <li>
-                            <SlCalender/>
-                            <p>Started on 9 Feb 2023</p>
-                          </li>
-                          <li>
-                            <SlCalender/>
-                            <p>Started on 9 Feb 2023</p>
-                          </li>
-                        </ul>
-                      </div>
-                        <hr />
-                        <div className='schedule'>
-                          <MdWysiwyg/>
-                          <p>View full schedule</p>
-                        </div>
-                    </div>
-                  </div>
-                {/* </Carousel> */}
+              <Carousel className='carousel' responsive={responsive}>
+                {data.batches && data.batches.map((item,index)=>{
+                    return(<Batches key={item.id} data={item}/>)
+                })}
+              </Carousel>
             </div>
 
             <div className='seeall'>
@@ -141,6 +84,7 @@ const Browse = () => {
                     {/* data is coming from data.json file */}
                     {data.educators && data.educators.map((item,index)=>{
                         if(index>3){
+                          // eslint-disable-next-line
                             return;
                         }
                         return (<Educators key={item.id} data={item}/>)
@@ -166,29 +110,11 @@ const Browse = () => {
             </div>
 
             <div className='testseries'>
-              {/* <Carousel> */}
-                    <div>
-                      <Link to="#"><div><h2>SAFALTA Batch Series</h2>  <span>FREE</span> </div>
-                        <div>
-                          <p>Test 16</p>
-                          <p>Feb 15,3:00 PM</p>
-                        </div>
-                      </Link>
-                      <Link to="#"><div><h2>SAFALTA Batch SeriesSAFALTA Batch SeriesSAFALTA Batch Series</h2>  <span>FREE</span> </div>
-                        <div>
-                          <p>Test 16</p>
-                          <p>Feb 15,3:00 PM</p>
-                        </div>
-                      </Link>
-                      <Link to="#"><div><h2>SAFALTA Batch Series</h2> <span>FREE</span> </div>
-                        <div>
-                          <p>Test 16</p>
-                          <p>Feb 15,3:00 PM</p>
-                        </div>
-                      </Link>
-
-                    </div>
-              {/* </Carousel> */}
+              <Carousel className='carousel' responsive={responsive}>
+                {data.testSeries && data.testSeries.map((item,index)=>{
+                   return(<TestSeries key={item.id} data={item}/>) 
+                })}
+              </Carousel>
             </div>
 
             <div className='seeall'>
@@ -198,55 +124,12 @@ const Browse = () => {
 
             <div className="upcomingCourses">
               {/* <Carousel> */}
-                    <div className="course">
-                      <div className='imgdiv'>
-                        <img src="https://static.uacdn.net/thumbnail/course/v2/880DB81F-4D0C-4466-92BA-CDD3FF348011_plus.png" alt="" />
-                        <AiFillLock/>
-                      </div>
-                      <div>
-                        <div>
-                          <span>Hindi</span>
-                          <p>Chemistry</p>
-                        </div>
-                        <h2>Evolve:Perfect Course on Biomolecules - IIT JEE</h2>
-                        <p>Starts on 15 Feb</p>
-                        <span>8 Lessons</span>
-                        <h3>Gaurav Dixit</h3>
-                      </div>
-                    </div>
-                    <div className="course">
-                      <div className='imgdiv'>
-                        <img src="https://static.uacdn.net/thumbnail/course/v2/880DB81F-4D0C-4466-92BA-CDD3FF348011_plus.png" alt="" />
-                        <AiFillLock/>
-                      </div>
-                      <div>
-                        <div>
-                          <span>Hindi</span>
-                          <p>Chemistry</p>
-                        </div>
-                        <h2>Evolve:Perfect Course on Biomolecules - IIT JEE</h2>
-                        <p>Starts on 15 Feb</p>
-                        <span>8 Lessons</span>
-                        <h3>Gaurav Dixit</h3>
-                      </div>
-                    </div>
-                    <div className="course">
-                      <div className='imgdiv'>
-                        <img src="https://static.uacdn.net/thumbnail/course/v2/880DB81F-4D0C-4466-92BA-CDD3FF348011_plus.png" alt="" />
-                        <AiFillLock/>
-                      </div>
-                      <div>
-                        <div>
-                          <span>Hindi</span>
-                          <p>Chemistry</p>
-                        </div>
-                        <h2>Evolve:Perfect Course on Biomolecules - IIT JEE</h2>
-                        <p>Starts on 15 Feb</p>
-                        <span>8 Lessons</span>
-                        <h3>Gaurav Dixit</h3>
-                      </div>
-                    </div>
-              {/* </Carousel> */}
+              <Carousel className='carousel' responsive={responsive}>
+             
+              {data.upcomingCourses && data.upcomingCourses.map((item,index)=>{
+              return(<Courses key={item.id} data={item}/>)
+             })}
+              </Carousel>
             </div>
             <div className='seeall'>
                   <h2>Recently Started Courses</h2>
@@ -255,55 +138,12 @@ const Browse = () => {
 
             <div className="upcomingCourses">
               {/* <Carousel> */}
-                    <div className="course">
-                      <div className='imgdiv'>
-                        <img src="https://static.uacdn.net/thumbnail/course/v2/880DB81F-4D0C-4466-92BA-CDD3FF348011_plus.png" alt="" />
-                        <AiFillLock/>
-                      </div>
-                      <div>
-                        <div>
-                          <span>Hindi</span>
-                          <p>Chemistry</p>
-                        </div>
-                        <h2>Evolve:Perfect Course on Biomolecules - IIT JEE</h2>
-                        <p>Starts on 15 Feb</p>
-                        <span>8 Lessons</span>
-                        <h3>Gaurav Dixit</h3>
-                      </div>
-                    </div>
-                    <div className="course">
-                      <div className='imgdiv'>
-                        <img src="https://static.uacdn.net/thumbnail/course/v2/880DB81F-4D0C-4466-92BA-CDD3FF348011_plus.png" alt="" />
-                        <AiFillLock/>
-                      </div>
-                      <div>
-                        <div>
-                          <span>Hindi</span>
-                          <p>Chemistry</p>
-                        </div>
-                        <h2>Evolve:Perfect Course on Biomolecules - IIT JEE</h2>
-                        <p>Starts on 15 Feb</p>
-                        <span>8 Lessons</span>
-                        <h3>Gaurav Dixit</h3>
-                      </div>
-                    </div>
-                    <div className="course">
-                      <div className='imgdiv'>
-                        <img src="https://static.uacdn.net/thumbnail/course/v2/880DB81F-4D0C-4466-92BA-CDD3FF348011_plus.png" alt="" />
-                        <AiFillLock/>
-                      </div>
-                      <div>
-                        <div>
-                          <span>Hindi</span>
-                          <p>Chemistry</p>
-                        </div>
-                        <h2>Evolve:Perfect Course on Biomolecules - IIT JEE</h2>
-                        <p>Starts on 15 Feb</p>
-                        <span>8 Lessons</span>
-                        <h3>Gaurav Dixit</h3>
-                      </div>
-                    </div>
-              {/* </Carousel> */}
+              <Carousel className='carousel' responsive={responsive}>
+             
+              {data.recentlyStartedCourses && data.recentlyStartedCourses.map((item,index)=>{
+              return(<Courses key={item.id} data={item}/>)
+             })}
+              </Carousel>
             </div>
             <div className='seeall'>
                   <h2>Popular Courses</h2>
@@ -312,55 +152,12 @@ const Browse = () => {
 
             <div className="upcomingCourses">
               {/* <Carousel> */}
-                    <div className="course">
-                      <div className='imgdiv'>
-                        <img src="https://static.uacdn.net/thumbnail/course/v2/880DB81F-4D0C-4466-92BA-CDD3FF348011_plus.png" alt="" />
-                        <AiFillLock/>
-                      </div>
-                      <div>
-                        <div>
-                          <span>Hindi</span>
-                          <p>Chemistry</p>
-                        </div>
-                        <h2>Evolve:Perfect Course on Biomolecules - IIT JEE</h2>
-                        <p>Starts on 15 Feb</p>
-                        <span>8 Lessons</span>
-                        <h3>Gaurav Dixit</h3>
-                      </div>
-                    </div>
-                    <div className="course">
-                      <div className='imgdiv'>
-                        <img src="https://static.uacdn.net/thumbnail/course/v2/880DB81F-4D0C-4466-92BA-CDD3FF348011_plus.png" alt="" />
-                        <AiFillLock/>
-                      </div>
-                      <div>
-                        <div>
-                          <span>Hindi</span>
-                          <p>Chemistry</p>
-                        </div>
-                        <h2>Evolve:Perfect Course on Biomolecules - IIT JEE</h2>
-                        <p>Starts on 15 Feb</p>
-                        <span>8 Lessons</span>
-                        <h3>Gaurav Dixit</h3>
-                      </div>
-                    </div>
-                    <div className="course">
-                      <div className='imgdiv'>
-                        <img src="https://static.uacdn.net/thumbnail/course/v2/880DB81F-4D0C-4466-92BA-CDD3FF348011_plus.png" alt="" />
-                        <AiFillLock/>
-                      </div>
-                      <div>
-                        <div>
-                          <span>Hindi</span>
-                          <p>Chemistry</p>
-                        </div>
-                        <h2>Evolve:Perfect Course on Biomolecules - IIT JEE</h2>
-                        <p>Starts on 15 Feb</p>
-                        <span>8 Lessons</span>
-                        <h3>Gaurav Dixit</h3>
-                      </div>
-                    </div>
-              {/* </Carousel> */}
+              <Carousel className='carousel' responsive={responsive}>
+             {data.popularCourses && data.popularCourses.map((item,index)=>{
+              return(<Courses key={item.id} data={item}/>)
+             })}
+                  
+              </Carousel>
             </div>
       </div>
     </div>

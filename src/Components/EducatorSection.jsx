@@ -2,8 +2,8 @@ import React from 'react'
 import "./EducatorSection.css";
 
 import {CgShapeRhombus} from "react-icons/cg";
-import {GiElectric} from "react-icons/gi";
-import {AiOutlineRight,} from "react-icons/ai";
+// import {GiElectric} from "react-icons/gi";
+// import {AiOutlineRight,} from "react-icons/ai";
 import data from "../data.json";
 import Educators from "../Components/Educators.js";
 
@@ -39,6 +39,7 @@ const EducatorSection = () => {
             {/* data is coming from data.json file */}
             {data.educators && data.educators.map((item,index)=>{
                 if(index>3){
+                    // eslint-disable-next-line
                     return;
                 }
                 return (<Educators key={item.id} data={item}/>)

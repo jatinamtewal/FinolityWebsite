@@ -1,12 +1,24 @@
 .sidebar{
     display: flex;
     flex-direction: column;
-    padding:1.5vmax 1vmax;
-
-    /* background-color: aquamarine; */
+    width: 16rem;
+    padding:5vmax 0;
+    padding-left: 2vmax;
+    position: fixed;
+    /* background-color: rgb(254, 174, 174); */
+    height: 100vh;
 }
-.sidebar a{
+.sidebar >a{
     text-decoration: none;
-    padding:0 20px 10px;
+    padding:10px;
+    /* padding-right: 3.5rem; */
+    width: 80%;
+    margin-top: 7px;
     color: var(--clr-primary);
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 8px;
+}
+.sidebar p{
+    padding: 30px 20px 10px;
 }

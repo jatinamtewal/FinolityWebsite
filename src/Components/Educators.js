@@ -1,5 +1,6 @@
 import React from 'react';
 import {GiElectric} from "react-icons/gi";
+// eslint-disable-next-line
 import {AiOutlineRight,} from "react-icons/ai";
 
 const Educators = ({data}) => {

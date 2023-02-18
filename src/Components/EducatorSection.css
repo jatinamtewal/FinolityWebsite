@@ -56,7 +56,9 @@
 }
 
 .Educators{
-    border: 1px solid rgba(200, 200, 200, 0.74);
+    /* border: 1px solid rgba(200, 200, 200, 0.74); */
+    /* border: 1px solid var(--clr-primary); */
+    box-shadow: 0 0 5px var(--clr-primary);
     border-radius: 10px;
     display: flex;
     padding: 1vmax;
@@ -87,11 +89,12 @@
 .imgDiv > span{
     text-transform: uppercase;
     display: flex;
-    background-color: rgb(247, 255, 13);
+    background-color: var(--clr-secondary);
     align-items: center;
+    color: white;
     padding:1px 15px 1px 5px;
     position: absolute;
-    bottom: -15px;
+    bottom: -16px;
     left: 0;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
@@ -112,7 +115,7 @@
     width: 33px;
     height: 17px;
     border-bottom-left-radius: 20px;
-    box-shadow: -15px 0px 0 0 yellow;
+    box-shadow: -15px 0px 0 0 var(--clr-secondary);
     z-index: 0;
 }
 .spantitle::after {

@@ -8,10 +8,15 @@
     background-color: rgb(247, 247, 255);
     padding: 2vmax 12.8vmax;
     min-height: 150vh;
+    position: inherit;
+    /* grid-template-areas: 'sidebar childContainer'; */
 }
 
 .childContainer{
     padding: 2rem;
+    grid-column-start: 2;
+    /* grid-area: childContainer; */
+    /* overflow: auto; */
 }
 
 
@@ -43,15 +48,36 @@
 .batchCarousel{
     margin-top: 3rem;
     display: flex;
+    justify-content: space-evenly;
+    /* border: 1px solid green; */
+    width: 50vw;
+    /* height: 50vh; */
     /* flex-wrap: wrap; */
+}
+.carousel{
+    width: 100%;
+    /* border: 1px solid red; */
+    /* padding: 10px; */
+}
+.react-multiple-carousel__arrow--right {
+    right: calc(0% + 1px) !important;
+}
+
+.react-multiple-carousel__arrow--left {
+    left: calc(0% + 1px) !important;
+}
+
+.react-multiple-carousel__arrow{
+    background: rgb(0 0 0 / 25%) !important;
 }
 
 .batch{
     max-width: 18vmax;
-    
-    box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
+    margin: 10px;
+    /* box-shadow: 0 0 5px rgba(15, 15, 15, 0.26); */
+    box-shadow: 0 0 5px var(--clr-secondary);
     /* border: 0.2px solid black; */
-    margin-right: 20px;
+    /* margin-right: 20px; */
     /* background-color: rgb(253, 117, 117); */
     /* margin-bottom: 6rem; */
     /* border: 1px solid red; */
@@ -74,7 +100,7 @@
     margin-right: 10px;
     font-size: 12px;
     padding: 2px 4px;
-    background-color: var(--clr-grey);
+    background-color: rgb(198, 198, 198);
     border-radius: 5px;
 }
 
@@ -89,14 +115,23 @@
 
 .stats ul li{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 5px;
 }
 
-.stats ul li svg{
-    margin-right: 10px;
+.stats ul li p{
+    font-size: 12px;
+    margin-left: 10px;
 }
-
+/* .clock , .profile{
+    width: 1.5em !important;
+} */
+.clock{
+    font-size: 17px !important;
+}
+.profile{
+    font-size: 20px !important;
+}
 
 .schedule{
     display: flex;
@@ -123,27 +158,35 @@
     /* background-color: red; */
     text-decoration: none;
     color: black;
-    border-top: 2px solid red;
-    border-bottom:2px solid red;
+    border-top: 2px solid var(--clr-secondary);
+    border-bottom:2px solid var(--clr-secondary);
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
 }
 
-.testseries div{
+.testseries{
+    display: flex;
+    width: 50vw;
+}
+
+/* .testseries .carousel{
     display:flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
+} */
 
 .testseries div a{
+    height: 12rem;
+    max-height: 13rem;
+    margin: 0 5px;
     margin-top: 1rem;
     padding:1vmax;
     max-width: 14rem;
     /* background-color: red; */
     text-decoration: none;  
     color: black;
-    border-top: 2px solid red;
-    border-bottom:2px solid red;
+    border-top: 2px solid var(--clr-primary);
+    border-bottom:2px solid var(--clr-primary);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -169,6 +212,7 @@
 
 .upcomingCourses{
     margin:3rem 0;
+    width: 50vw;
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -177,8 +221,9 @@
 .course{
     
     max-width: 18vmax;
-    /* margin-right: 20px; */
+    margin:3px 10px;
     box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
+    box-shadow: 0 0 5px var(--clr-primary);
     /* background-color: rgb(253, 117, 117); */
 }
 .imgdiv{
@@ -207,24 +252,31 @@
     align-items: center;
 }
 
-.imgdiv + div div span{
+.course  >div>div> span{
     margin-right: 10px;
-    font-size: 15px;
-    background-color: var(--clr-grey);
+    font-size: 12px;
+    background-color: rgb(238, 238, 238);
     padding: 0 4px;
 }
-
-.imgdiv + div div p{
-    color: red;
-    font-size:16px ;
-    text-transform: uppercase;
+.course>div>div>p{
+    color: var(--clr-secondary);
+    font-size: 14px;
 }
 
-.imgdiv + div h2{
-    font-size: 18px;
-    margin: 5px 0;
+
+.course  >div >p,.course  >div >span{
+    color: rgb(130, 130, 130);
+    font-size:13px ;
+}
+
+.course  div h2{
+    font-size: 13px;
+    margin: 13px 0;
+    font-weight: 500;
 }
 
 .imgdiv + div h3{
-    font-size: 15px;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 14px;
 }
