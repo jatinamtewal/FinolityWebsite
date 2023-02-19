@@ -12,6 +12,14 @@ const Educators = ({data}) => {
         WebkitLineClamp: 2,
         WebkitBoxOrient: 'vertical',
     };
+    const nStyle={
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',
+        display: '-webkit-box',
+        lineClamp: 1,
+        WebkitLineClamp: 1,
+        WebkitBoxOrient: 'vertical',
+    };
   return (
     <div className="Educators">
                 <div className='imgDiv'>
@@ -19,7 +27,7 @@ const Educators = ({data}) => {
                     <span className='spantitle'><GiElectric/>{data.title}</span>
                 </div>
                 <div>
-                    <h2 className="educatorName">{data.name}</h2>
+                    <h2 style={nStyle} className="educatorName">{data.name}</h2>
                     <p className="educatorDesc" style={pStyle}>{data.desc}</p>
                     <div className="educatorStats">
                         <div>

@@ -8,9 +8,7 @@ import data from "../data.json";
 import Educators from "../Components/Educators.js";
 
 const EducatorSection = () => {
-    // data.educators.map((educators)=>{
-    //    return console.log(educators.name);
-    // });
+
   return (
 
 

@@ -5,16 +5,16 @@ import "./Practise.css";
 
 const Practise = () => {
   return (
-    <div className='container'>
+    <div className='practisecontainer'>
       <Sidebar/>
-      <div className='childContainer'>
+      <div className='practisechildContainer'>
         <div className="backhomebtns">
           <Link to="/">Back</Link>
           <Link to="/">Home</Link>
         </div>
         <h1>Practise IIT JEE</h1>
         <div className="hero">
-          <div>
+          <div className='features'>
             <h2>Get unlimited practice with IIT JEE subscription</h2>
             <ul>
               <li>
@@ -43,7 +43,7 @@ const Practise = () => {
         </div>
         <div className="subjects">
           <h1>Chemistry</h1>
-          <div>
+          <div className='primary'>
             <Link to="#">Physical Chemistry</Link>
             <Link to="#">Physical Chemistry</Link>
             <Link to="#">Physical Chemistry</Link>
@@ -51,7 +51,7 @@ const Practise = () => {
         </div>
         <div className="subjects">
           <h1>Physics</h1>
-          <div>
+          <div className='secondary'>
             <Link to="#">Physical Chemistry</Link>
             <Link to="#">Physical Chemistry</Link>
             <Link to="#">Physical Chemistry</Link>
@@ -64,7 +64,7 @@ const Practise = () => {
         </div>
         <div className="subjects">
           <h1>Mathematics</h1>
-          <div>
+          <div className='primary'>
             <Link to="#">Physical Chemistry</Link>
             <Link to="#">Physical Chemistry</Link>
             <Link to="#">Physical Chemistry</Link>
@@ -78,7 +78,7 @@ const Practise = () => {
         </div>
         <div className="subjects">
           <h1>KVPY Syllabus</h1>
-          <div>
+          <div className='secondary'>
             <Link to="#">Physical Chemistry</Link>
             <Link to="#">Physical Chemistry</Link>
             <Link to="#">Physical Chemistry</Link>

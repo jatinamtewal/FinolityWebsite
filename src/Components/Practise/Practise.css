@@ -4,6 +4,20 @@
     --clr-grey:#313131;
 }
 
+.practisecontainer{
+    display: grid;
+    grid-template-columns: 1.5fr 5fr;
+    background-color: rgb(247, 247, 255);
+    padding: 2vmax 12.8vmax;
+    min-height: 150vh;
+    position: inherit;
+}
+
+.practisechildContainer{    
+    padding: 2rem;
+    grid-column-start: 2;
+}
+
 .backhomebtns a{
     color:var(--clr-grey);
     text-decoration: none;
@@ -41,6 +55,7 @@
 .hero button{
     padding: 10px 40px;
     border: none;
+    color: white;
     background-color: var(--clr-secondary);
     margin-top: 2rem;
 }
@@ -61,8 +76,85 @@
     /* background-color: red; */
     text-decoration: none;
     color: black;
-    border-left: 2px solid red;
-    border-right:2px solid red;
-    box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
+    /* box-shadow: 0 0 5px rgba(15, 15, 15, 0.26); */
+    
     border-radius: 10px;
+}
+.primary a{
+    border-left: 2px solid var(--clr-primary);
+    border-right:2px solid var(--clr-primary);
+    box-shadow: 0 0 5px var(--clr-primary);
+}
+
+.secondary a{
+    border-left: 2px solid var(--clr-secondary);
+    border-right:2px solid var(--clr-secondary);
+    box-shadow: 0 0 5px var(--clr-secondary);
+}
+
+
+
+
+@media screen and (max-width:600px) {
+    .practisecontainer{
+        grid-template-columns: 1fr;
+        padding: 2vmax;
+        width: 92%;
+    }
+
+    .practisechildContainer{
+        padding: 0;
+    }
+
+    .backhomebtns a{
+        font-size: 10px;
+        margin-top: 3rem;
+    }
+    .backhomebtns + h1{
+        font-size: 1.5rem;
+        margin-top: 1rem;
+        margin-bottom: -2rem;
+    }
+
+    .hero{
+        flex-direction: column-reverse;
+        margin-top: 2rem;
+    }
+
+    .hero div{
+        padding: 1rem;
+    }
+
+    .hero div h2{
+        font-size: 1rem;
+    }
+
+    .hero >div >img{
+        width: 100%;
+    }
+
+    .subjects>h1{
+        font-size: 1rem;
+    }
+
+    .subjects div a{
+        width: 17rem;
+        padding: 3vmax;
+        margin-right: 0;
+    }
+
+    .hero button{
+        padding: 5px 20px;
+        margin-top: 1rem;
+    }
+
+    .hero ul li p {
+        font-size: 11px;
+        margin-left: 5px;
+    }
+
+    .features{
+        padding: 0;
+    }
+
 }

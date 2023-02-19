@@ -1,6 +1,11 @@
 /* *{
     border: 1px solid red;
 } */
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
 .container{
     /* display: flex; */
     display: grid;
@@ -28,7 +33,9 @@
     /* background-color: red; */
     padding: 2rem;
 }
-
+.heading img{
+    width: 5rem;
+}
 .heading h1{
     font-size: 3rem;
     margin-top: 0;
@@ -39,6 +46,10 @@
     display: flex;
     justify-content: space-between;
     margin-top: 4rem;
+}
+
+.seeall h2{
+    font-size: 1.5rem;
 }
 
 .seeall a{
@@ -178,8 +189,8 @@
 .testseries div a{
     height: 12rem;
     max-height: 13rem;
-    margin: 0 5px;
     margin-top: 1rem;
+    margin-right: 10px;
     padding:1vmax;
     max-width: 14rem;
     /* background-color: red; */
@@ -207,6 +218,7 @@
     display: inline-block;
     padding:0 0.2rem;
     background-color: var(--clr-secondary);
+    margin-top: 0;
 }
 
 
@@ -279,4 +291,104 @@
     font-size: 14px;
     font-weight: 300;
     margin-top: 14px;
+}
+
+
+/*Responsiveness */
+@media screen and (max-width: 600px) { 
+    .sidebar{
+        display: none;
+    }
+
+    .container{
+        grid-template-columns: 1fr;
+        /* background-color: red; */
+        padding: 2vmax;
+        width: 90%;
+    }
+
+    .childContainer{
+        padding: 0;
+        width: 23%;
+    }
+
+    .heading{
+        padding: 0;
+        margin-top: 2rem;
+    }
+
+    .heading img{
+        width: 3rem;
+    }
+    .heading h1{
+        font-size: 2rem;
+        margin-left: 1rem;
+    }
+    .seeall{
+        margin-top: 2rem;
+        width: 107%;
+    }
+
+    .seeall h2{
+        font-size: 1rem;
+    }
+
+    .seeall a{
+        font-size: 1rem;
+    }
+
+
+    /* batch carousel */
+
+    .batchCarousel{
+        width: 93vw;
+    }
+
+    .batch{
+        max-width: 42vmax;
+        margin: 10px 3px;
+        margin-right: 10px;
+        /* margin-left: 28px; */
+    }
+
+    .batch > div{
+        padding: 16px;
+    }
+
+    /* topics */
+
+    .topics div a{
+        padding:2vmax;
+        min-width: 19rem;
+        margin-top: 1.5rem;   
+    }
+
+    /* test series */
+
+    .testseries{
+        width: 96vw;
+    }
+
+    .testseries div a{
+        max-width: 15rem;
+        max-height: 10rem;
+    }
+
+    .testseries div a div{
+        margin-top: 0;
+    }
+    .testseries div a > div > span{
+        margin-top: 1rem;
+    }
+
+    /* Upcoming Courses */
+
+    .upcomingCourses{
+        width: 95vw;
+    }
+
+    .course{
+        max-width: 37vmax;  
+        margin: 3px 10px;   
+    }
 }

@@ -5,9 +5,6 @@ import "./Browse.css";
 
 import Carousel from "react-multi-carousel";  //npm i react-multi-carousel   <----------------
 import "react-multi-carousel/lib/styles.css"; // add this also      <-------------------------
-import { SlCalender } from "react-icons/sl";
-import { AiFillLock } from "react-icons/ai";
-import { MdWysiwyg } from "react-icons/md";
 
 import data from "../../data.json";
 //inner components
@@ -33,7 +30,7 @@ const responsive = {
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
-    items: 1
+    items: 1.2
   }
 };
 
@@ -43,14 +40,6 @@ const responsive = {
 
 
 const Browse = () => {
-      const pStyle={
-        overflow: 'hidden',
-        textOverflow: 'ellipsis',
-        display: '-webkit-box',
-        lineClamp: 2,
-        WebkitLineClamp: 2,
-        WebkitBoxOrient: 'vertical',
-    };
   return (
     <div className='container'>
       <Sidebar/>
@@ -67,7 +56,7 @@ const Browse = () => {
             </div>
 
             <div className="batchCarousel">
-              <Carousel className='carousel' responsive={responsive}>
+              <Carousel removeArrowOnDeviceType={["tablet", "mobile"]} className='carousel' responsive={responsive}>
                 {data.batches && data.batches.map((item,index)=>{
                     return(<Batches key={item.id} data={item}/>)
                 })}
@@ -110,7 +99,7 @@ const Browse = () => {
             </div>
 
             <div className='testseries'>
-              <Carousel className='carousel' responsive={responsive}>
+              <Carousel removeArrowOnDeviceType={["tablet", "mobile"]} className='carousel' responsive={responsive}>
                 {data.testSeries && data.testSeries.map((item,index)=>{
                    return(<TestSeries key={item.id} data={item}/>) 
                 })}
@@ -124,7 +113,7 @@ const Browse = () => {
 
             <div className="upcomingCourses">
               {/* <Carousel> */}
-              <Carousel className='carousel' responsive={responsive}>
+              <Carousel removeArrowOnDeviceType={["tablet", "mobile"]} className='carousel' responsive={responsive}>
              
               {data.upcomingCourses && data.upcomingCourses.map((item,index)=>{
               return(<Courses key={item.id} data={item}/>)
@@ -138,7 +127,7 @@ const Browse = () => {
 
             <div className="upcomingCourses">
               {/* <Carousel> */}
-              <Carousel className='carousel' responsive={responsive}>
+              <Carousel removeArrowOnDeviceType={["tablet", "mobile"]} className='carousel' responsive={responsive}>
              
               {data.recentlyStartedCourses && data.recentlyStartedCourses.map((item,index)=>{
               return(<Courses key={item.id} data={item}/>)
@@ -152,7 +141,7 @@ const Browse = () => {
 
             <div className="upcomingCourses">
               {/* <Carousel> */}
-              <Carousel className='carousel' responsive={responsive}>
+              <Carousel removeArrowOnDeviceType={["tablet", "mobile"]} className='carousel' responsive={responsive}>
              {data.popularCourses && data.popularCourses.map((item,index)=>{
               return(<Courses key={item.id} data={item}/>)
              })}

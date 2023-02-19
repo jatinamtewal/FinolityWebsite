@@ -219,18 +219,36 @@
     }
 
     .Educators{
-        flex-direction: column;
+        flex-direction: row;
         margin: 0;
         margin-right: 2vmax;
         padding: 1vmax 3vmax;
+        width: 17rem;
     }
     .Educators > div{
         margin-top: 2vmax;
+    }
+    .imgDiv{
+        height: 17vmax;
+    }
+    .imgDiv > img{
+        width: 96%;
+        height: 100%;
+    }
+
+    .imgDiv > span{
+        bottom: -0px;
+        left: 3px;
+        font-size: 13px;
+        padding-right: 17px;
     }
 
     .button{
         padding: 14px 115px;
         font-size: 15px;
         margin-top: 10px;
+    }
+    .spantitle::before{
+        height: 10px;
     }
 }
